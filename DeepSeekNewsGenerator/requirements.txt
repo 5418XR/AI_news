@@ -1,0 +1,6 @@
+flask==2.3.3
+requests==2.31.0
+pyinstaller==6.0.0
+flask-frozen==0.18
+python-docx==0.8.11
+docx2txt==0.8

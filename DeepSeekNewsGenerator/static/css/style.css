@@ -1,0 +1,162 @@
+/* 全局样式 */
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --body-bg: #f5f7fb;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    background-color: var(--body-bg);
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+/* 应用标题样式 */
+.app-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.app-description {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+/* 卡片样式 */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: none;
+    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 1.2rem;
+}
+
+.card-title i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+/* API密钥卡片样式 */
+.api-key-card {
+    background-color: #f8f9ff;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* 按钮样式 */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #3a5bef;
+    border-color: #3a5bef;
+}
+
+/* 结果卡片样式 */
+.result-card {
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.result-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 500px;
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+
+/* 加载指示器样式 */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .col-md-6 {
+        width: 100%;
+    }
+    
+    .result-content {
+        max-height: 300px;
+    }
+}
+
+/* 美化滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 表单元素样式 */
+.form-control, .form-select {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(74, 107, 255, 0.25);
+}
+
+/* 生成结果内容样式 */
+#resultContainer {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+#resultContainer h1, 
+#resultContainer h2, 
+#resultContainer h3 {
+    color: #333;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#resultContainer p {
+    margin-bottom: 1rem;
+}
